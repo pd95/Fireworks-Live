@@ -26,14 +26,14 @@ struct ControlsView: View {
 
                     Spacer(minLength: 50)
 
-                    Stepper("Range: \(particleSystem.xPositionRange, specifier: "%g")%", value: $particleSystem.xPositionRange, in: -0...100, step: 5)
+                    Stepper("Range: \(particleSystem.xPositionRange, specifier: "%g")%", value: $particleSystem.xPositionRange, in: 0...100, step: 5)
                 }
                 HStack {
                     Stepper("Y: \(particleSystem.yPosition, specifier: "%g")%", value: $particleSystem.yPosition, in: -20...120, step: 5)
 
                     Spacer(minLength: 50)
 
-                    Stepper("Range: \(particleSystem.yPositionRange, specifier: "%g")%", value: $particleSystem.yPositionRange, in: -0...100, step: 5)
+                    Stepper("Range: \(particleSystem.yPositionRange, specifier: "%g")%", value: $particleSystem.yPositionRange, in: 0...100, step: 5)
                 }
             }
 
@@ -45,9 +45,9 @@ struct ControlsView: View {
             }
 
             Section("Angle") {
-                Stepper("Base: \(particleSystem.angle, specifier: "%g")", value: $particleSystem.angle, in: 0...360, step: 5)
+                Stepper("Base: \(particleSystem.angle, specifier: "%g")°", value: $particleSystem.angle, in: 0...360, step: 5)
 
-                Stepper("Range: \(particleSystem.angleRange, specifier: "%g")", value: $particleSystem.angleRange, in: 0...360, step: 5)
+                Stepper("Range: \(particleSystem.angleRange, specifier: "%g")°", value: $particleSystem.angleRange, in: 0...360, step: 5)
 
             }
 
@@ -55,13 +55,27 @@ struct ControlsView: View {
                 Stepper("Base: \(particleSystem.scale, specifier: "%g")", value: $particleSystem.scale, in: 5...1000, step: 5)
 
                 Stepper("Range: \(particleSystem.scaleRange, specifier: "%g")", value: $particleSystem.scaleRange, in: -100...100, step: 1)
+
+                Stepper("Speed: \(particleSystem.scaleSpeed, specifier: "%g")", value: $particleSystem.scaleSpeed, in: -100...100, step: 1)
             }
 
             Section("Opacity") {
-                Stepper("Base: \(particleSystem.opacity, specifier: "%g")", value: $particleSystem.opacity, in: 0...100, step: 5)
+                Stepper("Base: \(particleSystem.opacity, specifier: "%g")%", value: $particleSystem.opacity, in: 0...100, step: 5)
 
-                Stepper("Range: \(particleSystem.opacityRange, specifier: "%g")", value: $particleSystem.opacityRange, in: -100...100, step: 1)
+                Stepper("Range: \(particleSystem.opacityRange, specifier: "%g")%", value: $particleSystem.opacityRange, in: 0...100, step: 5)
+
+                Stepper("Speed: \(particleSystem.opacitySpeed, specifier: "%g")", value: $particleSystem.opacitySpeed, in: -100...100, step: 1)
             }
+
+            Section("Rotation") {
+                Stepper("Base: \(particleSystem.rotation, specifier: "%g")°", value: $particleSystem.rotation, in: 0...360, step: 5)
+
+                Stepper("Range: \(particleSystem.rotationRange, specifier: "%g")°", value: $particleSystem.rotationRange, in: 0...360, step: 5)
+
+                Stepper("Speed: \(particleSystem.rotationSpeed, specifier: "%g")", value: $particleSystem.rotationSpeed, in: -100...100, step: 1)
+            }
+
+            Toggle("Blend overlapping particles", isOn: $particleSystem.enableBlending)
         }
     }
 }

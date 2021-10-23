@@ -8,6 +8,9 @@
 import SwiftUI
 
 class ParticleSystem: ObservableObject {
+//    let colors: [Color] = [.red, .green, .blue, .orange, .yellow, .mint]
+//    let image = Image("confetti")
+    let colors: [Color] = []
     let image = Image("spark")
     var particles = Set<Particle>()
     var lastUpdate = Date()
@@ -36,6 +39,11 @@ class ParticleSystem: ObservableObject {
     @Published var scaleRange = 50.0
     @Published var scaleSpeed = 10.0
 
+    @Published var rotation = 0.0
+    @Published var rotationRange = 0.0
+    @Published var rotationSpeed = 0.0
+
+    @Published var enableBlending = false
 
     func update(date: Date) {
         let elapsedTime = date.timeIntervalSince1970 - lastUpdate.timeIntervalSince1970
@@ -50,8 +58,9 @@ class ParticleSystem: ObservableObject {
             particle.x += cos(particle.angle) * particle.speed * elapsedTime / 100
             particle.y += sin(particle.angle) * particle.speed * elapsedTime / 100
 
-            particle.scale += scaleSpeed * elapsedTime  / 50
-            particle.opacity += opacitySpeed * elapsedTime  / 50
+            particle.scale += scaleSpeed * elapsedTime / 50
+            particle.opacity += opacitySpeed * elapsedTime / 50
+            particle.rotation += rotationSpeed * elapsedTime
         }
 
         let birthSpeed = 1 / birthRate
@@ -74,7 +83,9 @@ class ParticleSystem: ObservableObject {
             speed: speed + Double.random(in: -speedRange / 2 ... speedRange / 2),
             scale: scale / 100 + Double.random(in: -scaleRange / 200 ... scaleRange / 200),
             opacity: opacity / 100 + Double.random(in: -opacityRange / 200 ... opacityRange / 200),
-            deathDate: Date() + lifetime / 100 + Double.random(in: -lifetimeRange / 200 ... lifetime / 200)
+            deathDate: Date() + lifetime / 100 + Double.random(in: -lifetimeRange / 200 ... lifetime / 200),
+            rotation: rotation + Double.random(in: -rotationRange / 2 ... rotationRange / 2),
+            color: colors.randomElement() ?? .white
         )
     }
 }

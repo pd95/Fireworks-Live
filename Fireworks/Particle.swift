@@ -5,7 +5,7 @@
 //  Created by Philipp on 23.10.21.
 //
 
-import Foundation
+import SwiftUI
 
 class Particle: Hashable, Equatable {
     let id = UUID()
@@ -17,8 +17,10 @@ class Particle: Hashable, Equatable {
     var scale: Double
     var opacity: Double
     var deathDate: Date
+    var rotation: Double
+    var color: Color
 
-    init(x: Double, y: Double, angle: Double, speed: Double, scale: Double, opacity: Double, deathDate: Date) {
+    init(x: Double, y: Double, angle: Double, speed: Double, scale: Double, opacity: Double, deathDate: Date, rotation: Double, color: Color) {
         self.x = x
         self.y = y
         self.angle = angle
@@ -26,6 +28,8 @@ class Particle: Hashable, Equatable {
         self.scale = scale
         self.opacity = opacity
         self.deathDate = deathDate
+        self.rotation = rotation
+        self.color = color
     }
 
     func hash(into hasher: inout Hasher) {
