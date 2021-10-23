@@ -15,6 +15,7 @@
 		17F067E027248CC200454B7D /* ParticleSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F067DF27248CC200454B7D /* ParticleSystem.swift */; };
 		17F067E227248DB200454B7D /* EmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F067E127248DB200454B7D /* EmitterView.swift */; };
 		17F067E4272497D400454B7D /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F067E3272497D400454B7D /* ControlsView.swift */; };
+		17F067E62724A1F100454B7D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 17F067E52724A1F100454B7D /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		17F067DF27248CC200454B7D /* ParticleSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleSystem.swift; sourceTree = "<group>"; };
 		17F067E127248DB200454B7D /* EmitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterView.swift; sourceTree = "<group>"; };
 		17F067E3272497D400454B7D /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
+		17F067E52724A1F100454B7D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 		17F067C327248ADC00454B7D = {
 			isa = PBXGroup;
 			children = (
+				17F067E52724A1F100454B7D /* README.md */,
 				17F067CE27248ADC00454B7D /* Fireworks */,
 				17F067CD27248ADC00454B7D /* Products */,
 			);
@@ -61,10 +64,10 @@
 			children = (
 				17F067CF27248ADC00454B7D /* FireworksApp.swift */,
 				17F067D127248ADC00454B7D /* ContentView.swift */,
+				17F067E127248DB200454B7D /* EmitterView.swift */,
 				17F067E3272497D400454B7D /* ControlsView.swift */,
 				17F067DD27248BB600454B7D /* Particle.swift */,
 				17F067DF27248CC200454B7D /* ParticleSystem.swift */,
-				17F067E127248DB200454B7D /* EmitterView.swift */,
 				17F067D327248ADE00454B7D /* Assets.xcassets */,
 				17F067D527248ADE00454B7D /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F067E62724A1F100454B7D /* README.md in Resources */,
 				17F067D727248ADE00454B7D /* Preview Assets.xcassets in Resources */,
 				17F067D427248ADE00454B7D /* Assets.xcassets in Resources */,
 			);

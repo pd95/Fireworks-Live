@@ -1,7 +1,8 @@
-#  Dice Off
+# Fireworks
 
-A simple strategy game for iPad implemented along the HWS+ live stream by Paul Hudson. 
+A nice little particle system for iPad using SwiftUIs new `Timeline` and `Canvas` views. 
+Implemented along the [HWS+](https://www.hackingwithswift.com/plus/) live stream by Paul Hudson. 
 
 ## Screenshot
 
-![Dice Off](_screenshots/DiceOff_iPadAir.png)
+![Fireworks](_screenshots/Fireworks_screenshot_iPad.png)
