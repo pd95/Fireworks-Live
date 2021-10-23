@@ -6,3 +6,6 @@ Implemented along the [HWS+](https://www.hackingwithswift.com/plus/) live stream
 ## Screenshot
 
 ![Fireworks](_screenshots/Fireworks_screenshot_iPad.png)
+
+https://user-images.githubusercontent.com/25307503/138570713-2335816b-2991-4176-923d-a1e3f4f52d63.mp4
+
