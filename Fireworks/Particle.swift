@@ -12,9 +12,20 @@ class Particle: Hashable, Equatable {
     var x: Double
     var y: Double
 
-    init(x: Double, y: Double) {
+    var angle: Double
+    var speed: Double
+    var scale: Double
+    var opacity: Double
+    var deathDate: Date
+
+    init(x: Double, y: Double, angle: Double, speed: Double, scale: Double, opacity: Double, deathDate: Date) {
         self.x = x
         self.y = y
+        self.angle = angle
+        self.speed = speed
+        self.scale = scale
+        self.opacity = opacity
+        self.deathDate = deathDate
     }
 
     func hash(into hasher: inout Hasher) {

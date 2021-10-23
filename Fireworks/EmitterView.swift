@@ -20,7 +20,9 @@ struct EmitterView: View {
                     let xPos = particle.x * size.width
                     let yPos = particle.y * size.height
 
+                    context.opacity = particle.opacity
                     context.translateBy(x: xPos, y: yPos)
+                    context.scaleBy(x: particle.scale, y: particle.scale)
                     context.draw(particleSystem.image, at: .zero)
                     context.transform = baseTransform
                 }
