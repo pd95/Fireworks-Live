@@ -11,9 +11,12 @@ struct ContentView: View {
     @StateObject var particleSystem = ParticleSystem()
 
     var body: some View {
-        EmitterView(particleSystem: particleSystem)
-            .ignoresSafeArea()
-            .background(.black)
+        HStack {
+            EmitterView(particleSystem: particleSystem)
+                .ignoresSafeArea()
+                .background(.black)
+            ControlsView(particleSystem: particleSystem)
+        }
     }
 }
 

@@ -14,6 +14,7 @@
 		17F067DE27248BB700454B7D /* Particle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F067DD27248BB600454B7D /* Particle.swift */; };
 		17F067E027248CC200454B7D /* ParticleSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F067DF27248CC200454B7D /* ParticleSystem.swift */; };
 		17F067E227248DB200454B7D /* EmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F067E127248DB200454B7D /* EmitterView.swift */; };
+		17F067E4272497D400454B7D /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F067E3272497D400454B7D /* ControlsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		17F067DD27248BB600454B7D /* Particle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Particle.swift; sourceTree = "<group>"; };
 		17F067DF27248CC200454B7D /* ParticleSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleSystem.swift; sourceTree = "<group>"; };
 		17F067E127248DB200454B7D /* EmitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterView.swift; sourceTree = "<group>"; };
+		17F067E3272497D400454B7D /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				17F067CF27248ADC00454B7D /* FireworksApp.swift */,
 				17F067D127248ADC00454B7D /* ContentView.swift */,
+				17F067E3272497D400454B7D /* ControlsView.swift */,
 				17F067DD27248BB600454B7D /* Particle.swift */,
 				17F067DF27248CC200454B7D /* ParticleSystem.swift */,
 				17F067E127248DB200454B7D /* EmitterView.swift */,
@@ -150,6 +153,7 @@
 				17F067E227248DB200454B7D /* EmitterView.swift in Sources */,
 				17F067D227248ADC00454B7D /* ContentView.swift in Sources */,
 				17F067DE27248BB700454B7D /* Particle.swift in Sources */,
+				17F067E4272497D400454B7D /* ControlsView.swift in Sources */,
 				17F067D027248ADC00454B7D /* FireworksApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
